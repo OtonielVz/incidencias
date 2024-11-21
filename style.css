@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+    background-color: #8a8a8a;
+}
+
+section {
+    background-color: #ffffff;
+    width: 100%; /* Aumentar para mayor espacio, ajustable */
+    max-width: 1200px; /* Limitar el tamaño máximo */
+    min-height: 50em; /* Altura mínima ajustada */
+    overflow-x: hidden; /* Para permitir desplazamiento horizontal si es necesario */
+    overflow-y: hidden; /* Evitar el desbordamiento vertical */
+    border-radius: 8px; /* Bordes redondeados para el contenedor */
+}
+
+.titles {
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 5em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+    text-align: center;
+}
+
+.lastType {
+    grid-column: span 3;
+    text-align: center;
+}
+
+svg {
+    color: rgb(255, 208, 0);
+    transform: scale(1.5);
+}
+
+.n1 {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(14, 1fr);
+    padding: 10px;
+    place-items: center;
+    justify-content: space-around;
+    gap: 15px; /* Separación entre los elementos */
+    border-bottom: 1px solid #ccc; /* Línea separadora entre filas */
+    text-align: center;
+}
+
+.lastSpan {
+    grid-column: span 8;
+    font-size: 13px;
+    white-space: normal; /* Permitir que el texto se ajuste */
+    word-wrap: break-word; /* Romper el texto largo si es necesario */
+    text-align: justify; /* Alineación del texto */
+}
+
+.number1 {
+    background-color: rgb(104, 19, 19);
+    width: 4em;
+    height: 4em;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number1 p {
+    color: #fff;
+    font-size: 20px;
+    padding: 6px;
+}
+
+.subTitle {
+    width: 10em;
+    padding-inline: 15px;
+    text-align: center;
+}
+
+.times {
+    width: 10em;
+    text-align: center;
+}
+
+.lastSpan p {
+    width: 38em;
+    word-wrap: break-word;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    section {
+        width: 90%; /* Reducir el ancho para pantallas más pequeñas */
+    }
+
+    .n1 {
+        grid-template-columns: repeat(6, 1fr); /* Hacer las columnas más pequeñas en pantallas pequeñas */
+    }
+
+    .number1 p {
+        font-size: 16px; /* Reducir tamaño del texto en la caja */
+    }
+
+    .lastSpan p {
+        width: 100%;
+    }
+}
